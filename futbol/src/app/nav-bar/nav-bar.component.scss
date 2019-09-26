@@ -10,9 +10,21 @@ img {
   height: 50px;
 }
 
-ul {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-right: 1px solid white;
-  width: 15%;
-  height: 100%;
+.wrapper {
+    padding-left: 70px;
+    transition: all .4s ease 0s;
+    height: 100%;
+    position: absolute;
+}
+
+.sidebar-wrapper {
+    margin-left: -70px;
+    left: 70px;
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-right: 1px solid white;
+    position: fixed;
+    height: 100%;
+    z-index: 10000;
+    transition: all .4s ease 0s;
 }

@@ -1,12 +1,16 @@
-<ul class="nav flex-column">
+<div class = "wrapper">
+<div class = "sidebar-wrapper">
+<ul class="nav sidebar-nav flex-column">
   <img src="../../assets/img/logo_futbol.png">
   <li class="nav-item">
-    <a class="nav-link active" href="#"><fa-icon [icon]="faTable"></fa-icon> Tabla General</a>
+    <a class="nav-link active" routerLink = '/Table' ><fa-icon [icon]="faTable"></fa-icon> Tabla General</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#"><fa-icon [icon]="faFutbol"></fa-icon> Partidos</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#"><fa-icon [icon]="faUsers"></fa-icon> Equipos</a>
+    <a class="nav-link" routerLink = '/Teams'><fa-icon [icon]="faUsers"></fa-icon> Equipos</a>
   </li>
 </ul>
+</div>
+</div>
