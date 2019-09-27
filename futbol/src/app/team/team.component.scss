@@ -1,14 +1,17 @@
 .wrapper {
     padding-left: 170px;
     padding-right: -10px;
-   // transition: all .4s ease 0s;
-    height: 100%;
-    position: absolute;
+    overflow-y: scroll;
+    position: relative;
+    top: 80px;
+    height: calc(100% - 80px);
 }
 
 h1 {
     color: #fff;
-    //position: fixed;
+    position: fixed;
+    z-index: 5;
+    left: 50%;
 }
 
 .row {
@@ -22,4 +25,8 @@ span {
 
 label {
     font-size: 14px;
+}
+
+.card { 
+    height: 250px;
 }

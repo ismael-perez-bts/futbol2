@@ -13,7 +13,7 @@ export class TeamComponent implements OnInit {
   constructor() {
     this.teams = [
     {
-    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png',  
+    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/13/13.png',  
     position: 1,
     name: "Queretaro",
     ubication: "Queretaro",
@@ -27,7 +27,7 @@ export class TeamComponent implements OnInit {
     stadium: "Territorio Santos"
     },
      {
-    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png', 
+    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/1/1.png', 
     position: 3,
     name: "America",
     ubication: "CDMX",
@@ -48,14 +48,14 @@ export class TeamComponent implements OnInit {
     stadium: "Victoria"
     },
     {
-    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png',    
+    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/9/9.png',    
     position: 6,
     name: "Leon",
     ubication: "Leon",
     stadium: "Nou Camp"
     },
     {
-    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png',    
+    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/5/5.png',    
     position: 7,
     name: "Tijuana",
     ubication: "Tijuana",

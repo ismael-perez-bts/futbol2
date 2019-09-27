@@ -1,33 +1,43 @@
 .wrapper {
-    padding-left: 170px;
-    padding-right: -10px;
+   //padding-right: -10px;
    // transition: all .4s ease 0s;
-    height: 100%;
-    position: absolute;
+   height: calc(100% - 60px);
+   width: 100%;
+   position: absolute;
+   overflow-y: scroll;
+   top: 60px;
+}
+
+table {
+   position: relative;
+   left: 9%;
 }
 
 h1 {
-    color: #fff;
-    //position: fixed;
+   color: #fff;
+   position: fixed;
+   z-index: 5;
+   left: 50%;
+   //position: fixed;
 }
 
 .row {
-    width: 1100px;
+   width: 1100px;
    // height: 100%;
 }
 
 span {
-    font-size: 14px;
+   font-size: 14px;
 }
 
 label {
-    font-size: 14px;
+   font-size: 14px;
 }
 
 table {
-    background-color: #FFF;
+   background-color: #FFF;
    color: #333;
-  // font-family: sans-serif;
+   // font-family: sans-serif;
    font-size: .9em;
    font-weight: 300;
    text-align: left;
@@ -36,7 +46,6 @@ table {
    border: 1px solid #428bca;
    margin: 20px auto;
    cursor: pointer;
-
 }
 
 th {
