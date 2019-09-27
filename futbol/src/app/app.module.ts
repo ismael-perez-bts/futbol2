@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -12,6 +12,7 @@ import { TableComponentComponent } from './table-component/table-component.compo
 import { TeamsComponentComponent } from './teams-component/teams-component.component';
 
 
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,15 @@ import { TeamsComponentComponent } from './teams-component/teams-component.compo
     TeamComponent,
     GeneralTableComponent,
     TableComponentComponent,
-    TeamsComponentComponent
+    TeamsComponentComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
