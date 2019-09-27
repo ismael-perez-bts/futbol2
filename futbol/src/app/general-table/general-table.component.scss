@@ -11,18 +11,7 @@ h1 {
     //position: fixed;
 }
 
-.row {
-    width: 1100px;
-   // height: 100%;
-}
 
-span {
-    font-size: 14px;
-}
-
-label {
-    font-size: 14px;
-}
 
 table {
     background-color: #FFF;
@@ -46,8 +35,7 @@ th {
    text-align: center;
 }
 
-th:first-child,
-td:first-child {
+th:first-child {
    padding: 0 15px 0 20px;
    text-align: center;
 }
@@ -62,9 +50,9 @@ tbody tr:hover {
 tbody tr:last-child td {
    border: none;
 }
-tbody td {
-   border-bottom: 1px solid #ddd;
-   text-align: center;
+tbody {
+   border-bottom: 2px solid #ddd;
+   text-align: left;
 }
 td:last-child {
    text-align: right;

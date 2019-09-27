@@ -1,0 +1,58 @@
+[
+    {
+    "logo": "https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png",  
+    "position": 1,
+    "name": "Queretaro",
+    "location": "Queretaro",
+    "stadium": "La Corregidora"
+    },
+     {
+    "logo": "https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png", 
+    "position": 2,
+    "name": "Santos Laguna",
+    "location": "Torreon",
+    "stadium": "Territorio Santos"
+    },
+     {
+    "logo": "https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png", 
+    "position": 3,
+    "name": "America",
+    "location": "CDMX",
+    "stadium": "Azteca"
+    },
+     {
+    "logo": "https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png",    
+    "position": 4,
+    "name": "UANL",
+    "location": "Monterrey",
+    "stadium": "La Corregidora"
+    },
+     {
+    "logo": "https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png",    
+    "position": 5,
+    "name": "Necaxa",
+    "location": "Aguascalientes",
+    "stadium": "Victoria"
+    },
+    {
+    "logo": "https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png",    
+    "position": 6,
+    "name": "Leon",
+    "location": "Leon",
+    "stadium": "Nou Camp"
+    },
+    {
+    "logo": "https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png",    
+    "position": 7,
+    "name": "Tijuana",
+    "location": "Tijuana",
+    "stadium": "Caliente"
+    },
+    {
+    "logo": "https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png",    
+    "position": 8,
+    "name": "UNAM",
+    "location": "CDMX",
+    "stadium": "Olimpico Universitario"
+    }
+]

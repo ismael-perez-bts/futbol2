@@ -3,21 +3,8 @@
 <div class = 'wrapper'>
      <h1 class = 'text-center'>Equipos</h1>
 <div class = 'row mx-0'>
-        <div class = 'md-4 mt-4 card-deck' *ngFor = 'let team of teams' class = 'col-md-3 '>
-            <div class = 'card mb-3'>
-               
-            <div class = 'card-body text-center'>
-
-            <img class = 'w-80 mb-2' src = '{{team.profileImg}}'/> <br/>
-
-               <span class = 'mx-1'><b>{{team.name}}</b></span><br/>
-                <span class = 'mx-1'>{{team.ubication}}</span><br/>
-                <label>Estadio:</label>
-                <span class = 'mx-1'>{{team.stadium}}</span><br/>
-                <label>Posicion:</label>
-                <span class = 'mx-1'>{{team.position}}</span><br/>
-            </div>
-        </div>
+        <div class = 'md-4 mt-4 card-deck' *ngFor = "let team of teams$ | async" class = 'col-md-3 '>
+            <app-teams-component [team] = 'team'></app-teams-component>           
     </div>
 </div>
 </div>

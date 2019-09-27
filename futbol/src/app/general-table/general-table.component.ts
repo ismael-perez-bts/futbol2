@@ -1,78 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { Team } from '../model/Team';
+import { TeamsService } from '../services/teams.services';
+import { Observable } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-general-table',
   templateUrl: './general-table.component.html',
-  styleUrls: ['./general-table.component.scss']
+  styleUrls: ['./general-table.component.scss'],
+  providers: [TeamsService]
 })
 export class GeneralTableComponent implements OnInit {
 
-  teams: Team [];
+  public teams$: Observable<Team []>;
+  columns: string[];
 
-  constructor() {
-     this.teams = [
-    {
-    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png',  
-    position: 1,
-    name: "Queretaro",
-    ubication: "Queretaro",
-    stadium: "La Corregidora"
-    },
-     {
-    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png', 
-    position: 2,
-    name: "Santos Laguna",
-    ubication: "Torreon",
-    stadium: "Territorio Santos"
-    },
-     {
-    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png', 
-    position: 3,
-    name: "America",
-    ubication: "CDMX",
-    stadium: "Azteca"
-    },
-     {
-    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png',    
-    position: 4,
-    name: "UANL",
-    ubication: "Monterrey",
-    stadium: "La Corregidora"
-    },
-     {
-    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png',    
-    position: 5,
-    name: "Necaxa",
-    ubication: "Aguascalientes",
-    stadium: "Victoria"
-    },
-    {
-    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png',    
-    position: 6,
-    name: "Leon",
-    ubication: "Leon",
-    stadium: "Nou Camp"
-    },
-    {
-    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png',    
-    position: 7,
-    name: "Tijuana",
-    ubication: "Tijuana",
-    stadium: "Caliente"
-    },
-    {
-    profileImg: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos64x64/147/147.png',    
-    position: 8,
-    name: "UNAM",
-    ubication: "CDMX",
-    stadium: "Olimpico Universitario"
-    }
-  ]
+  constructor(private teamsService: TeamsService, private router: ActivatedRoute) {
+  /*  this.teamsService.getTeams().subscribe(data => {
+      this.team = data; 
+      }) */
+
+   this.teams$ = this.teamsService.getTeams();
+   this.columns = ['position', 'team', 'games_played', 'games_won', 'games_tied', 'games_lost', 'goals_in_favor', 'goals_against', 'goal_difference', 'points' ];
+  
+    
    }
-
-
+   
   ngOnInit() {
+    
   }
 
 }
