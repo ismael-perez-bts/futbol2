@@ -4,11 +4,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { HttpClientModule } from '@angular/common/http'; //HttpClientModule to simulate conection
+
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api'; //modules to simulate data server
+import { InMemoryDataService } from './services/in-memory-data.service'; //modules to simulate data server
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TeamComponent } from './team/team.component';
 import { GeneralTableComponent } from './general-table/general-table.component';
-import { TableComponentComponent } from './table-component/table-component.component';
 import { TeamsComponentComponent } from './teams-component/teams-component.component';
 
 
@@ -20,7 +23,6 @@ import { LoginComponent } from './login/login.component';
     NavBarComponent,
     TeamComponent,
     GeneralTableComponent,
-    TableComponentComponent,
     TeamsComponentComponent,
     LoginComponent
   ],
@@ -29,7 +31,11 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     FontAwesomeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(         //Import modules to simulate data server
+  InMemoryDataService, { dataEncapsulation: false }   //import simulate data service  
+  ) //import simulate data service  
   ],
   providers: [],
   bootstrap: [AppComponent],

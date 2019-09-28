@@ -11,6 +11,7 @@ import { Team } from '../model/Team';
 })
 
 export class TeamsService {
+     private teamsUrl = 'api/table';  // URL to web api   
 
     constructor (private http: HttpClient) {
 
@@ -18,8 +19,8 @@ export class TeamsService {
     }
 
     public getTeams (): Observable<Team []> {
-        console.log(this.http.get<Team []>(`${environment.apiUrl}/table`))
-       return this.http.get<Team []>(`${environment.apiUrl}/table`)
+       //return this.http.get<Team []>(`${environment.apiUrl}/table`)
+       return this.http.get<Team []>(this.teamsUrl)  //conection to the url simulated API
        .pipe(
            catchError((err) => {
                alert('There was an error. ');

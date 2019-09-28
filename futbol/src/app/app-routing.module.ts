@@ -9,7 +9,7 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '',
-    component: GeneralTableComponent},
+    component: LoginComponent},
   { path: 'Table', 
     component: GeneralTableComponent
   },
