@@ -1,9 +1,9 @@
- <app-nav-bar></app-nav-bar>
+<app-nav-bar></app-nav-bar>
 <h1 class = 'text-center'>Equipos</h1>
 <div class = 'wrapper w-100'>
 <div class = 'row mx-0 w-100'>
-        <div class = 'md-4 mt-4 card-deck' *ngFor = "let team of teams$ | async" class = 'col-xl-3 col-lg-4 col-md-6'>
-            <app-teams-component [team] = 'team'></app-teams-component>           
+    <div class = 'md-4 mt-4 card-deck' *ngFor = "let team of teams$ | async" class = 'col-xl-3 col-lg-4 col-md-6'>
+        <app-teams-component [team] = 'team'></app-teams-component>           
     </div>
 </div>
 </div>

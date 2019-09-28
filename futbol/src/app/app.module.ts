@@ -16,6 +16,7 @@ import { TeamsComponentComponent } from './teams-component/teams-component.compo
 
 
 import { LoginComponent } from './login/login.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LoginComponent } from './login/login.component';
     TeamComponent,
     GeneralTableComponent,
     TeamsComponentComponent,
-    LoginComponent
+    LoginComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

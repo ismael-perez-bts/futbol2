@@ -3,7 +3,6 @@ import { Team } from '../model/Team';
 import { TeamsService } from '../services/teams.services';
 import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-general-table',

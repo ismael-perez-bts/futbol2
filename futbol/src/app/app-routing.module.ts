@@ -4,20 +4,19 @@ import { TeamComponent } from './team/team.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GeneralTableComponent } from './general-table/general-table.component';
 import { LoginComponent } from './login/login.component';
-
-
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
   { path: '',
-    component: LoginComponent},
+    component: LoginComponent },
   { path: 'Table', 
-    component: GeneralTableComponent
-  },
+    component: GeneralTableComponent },
   { path: 'Teams',
-    component: TeamComponent
-  },
+    component: TeamComponent },
   { path: 'Login',
-    component: LoginComponent}  
+    component: LoginComponent },
+  { path: 'Welcome',
+    component: WelcomeComponent } 
 ];
 
 @NgModule({
