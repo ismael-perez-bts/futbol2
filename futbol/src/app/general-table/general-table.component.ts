@@ -14,15 +14,11 @@ import { map } from 'rxjs/operators';
 export class GeneralTableComponent implements OnInit {
 
   public teams$: Observable<Team []>;
-  columns: string[];
 
   constructor(private teamsService: TeamsService, private router: ActivatedRoute) {
   
 
    this.teams$ = this.teamsService.getTeams();
-
-
-   this.columns = ['position', 'team', 'games_played', 'games_won', 'games_tied', 'games_lost', 'goals_in_favor', 'goals_against', 'goal_difference', 'points' ];
   
     
    }
