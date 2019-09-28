@@ -1,25 +1,25 @@
+<app-nav-bar></app-nav-bar>
 <h1 class = 'text-center'>Tabla General</h1>
 <div class = 'wrapper'>
-     <table>
-   <thead>
-      <tr>
-         <th>Posicion</th>
-         <th colspan="2">Equipo</th>
-         <th>JJ</th>
-         <th>JG</th>
-         <th>JE</th>
-         <th>JP</th>
-         <th>GF</th>
-         <th>GC</th>
-         <th>DG</th>
-         <th>Puntos</th>
-      </tr>
-   </thead>
-        <tbody *ngFor = 'let team of teams$ | async'>
-       <app-table-component [team] = 'team'></app-table-component>
-        </tbody>
-</table>
-
+   <table>
+      <thead>
+         <tr>
+            <th>Posicion</th>
+            <th colspan="2">Equipo</th>
+            <th>JJ</th>
+            <th>JG</th>
+            <th>JE</th>
+            <th>JP</th>
+            <th>GF</th>
+            <th>GC</th>
+            <th>DG</th>
+            <th>Puntos</th>
+         </tr>
+      </thead>
+      <tbody *ngFor = 'let team of teams$ | async'>
+         <app-table-component [team] = 'team'></app-table-component>
+      </tbody>
+   </table>
 </div>
           
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,16 +14,14 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', Validators.required)
   });
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    this.loginForm.setValue({ ...this.loginForm.value, email: 'elcejas@gmail.com' });
   }
 
   onLogin() {
     if(this.loginForm.valid){
-      let data = JSON.stringify(this.loginForm.value);
-      alert(data);  
+      this.router.navigate(['/Welcome']);
     } else {
       alert('Wrong credentials!');
     }
