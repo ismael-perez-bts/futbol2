@@ -1,9 +1,9 @@
 export interface Team {
-  // id: number;
+    id: number;
     name: string;
     location: string;
     stadium: string;
-    logo: string;/*
+    logo: string;
     games_played: number;
     games_won: number;
     games_tied: number;
@@ -11,6 +11,6 @@ export interface Team {
     goals_in_favor: number;
     goals_against: number;
     goal_difference: number;
-    points: number;*/
+    points: number;
     position: number;
 }

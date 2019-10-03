@@ -17,7 +17,7 @@ export class TeamComponent implements OnInit {
 
   constructor(private teamsService: TeamsService, private Route: ActivatedRoute) {
 
-     this.teams$ = this.teamsService.getTeams();
+     this.teams$ = this.teamsService.getTeamsCards();
      
    }
 

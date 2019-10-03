@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-  }
+  } 
+
 
   onLogin() {
     if(this.loginForm.valid){

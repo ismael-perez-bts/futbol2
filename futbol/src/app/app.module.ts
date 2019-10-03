@@ -17,6 +17,7 @@ import { TeamsComponentComponent } from './teams-component/teams-component.compo
 
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { UpdateTeamComponent } from './update-team/update-team.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
     GeneralTableComponent,
     TeamsComponentComponent,
     LoginComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    UpdateTeamComponent
   ],
   imports: [
     BrowserModule,
@@ -34,10 +36,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
+    HttpClientModule,/*
     HttpClientInMemoryWebApiModule.forRoot(         //Import modules to simulate data server
   InMemoryDataService, { dataEncapsulation: false }   //import simulate data service  
-  ) //import simulate data service  
+  ) //import simulate data service  */
   ],
   providers: [],
   bootstrap: [AppComponent],
