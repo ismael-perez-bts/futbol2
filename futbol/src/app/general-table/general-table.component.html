@@ -1,39 +1,37 @@
 <app-nav-bar></app-nav-bar>
 <h1 class = 'text-center'>Tabla General</h1>
-
 <div class = 'wrapper'>
-     <table>
-   <thead>
-      <tr>
-         <th>Posicion</th>
-         <th colspan="2">Equipo</th>
-         <th>JJ</th>
-         <th>JG</th>
-         <th>JE</th>
-         <th>JP</th>
-         <th>GF</th>
-         <th>GC</th>
-         <th>DG</th>
-         <th>Puntos</th>
-      </tr>
-   </thead>
-        <tbody >
-           <tr *ngFor = "let team of teams$ | async">
-       <td>{{team.position}}</td>
-   <td><img class = 'w-80 mb-2' src = "..\assets\img\{{team.logo}}"/></td>
-   <td>{{team.name}}</td>
-   <td>{{team.games_played}}</td>
-   <td>{{team.games_won}}</td>
-   <td>{{team.games_tied}}</td>
-   <td>{{team.games_lost}}</td>
-   <td>{{team.goals_in_favor}}</td>
-   <td>{{team.goals_against}}</td>
-   <td>{{team.goal_difference}}</td>
-   <td>{{team.points}}</td>
-            </tr>
-        </tbody>
-</table>
-
+   <table class="tableFixHead">
+      <thead>
+         <tr>
+            <th class="text-left pl-2">Posicion</th>
+            <th colspan="2" class="text-left pl-2">Equipo</th>
+            <th class="text-left pl-2">JJ</th>
+            <th class="text-left pl-2">JG</th>
+            <th class="text-left pl-2">JE</th>
+            <th class="text-left pl-2">JP</th>
+            <th class="text-left pl-2">GF</th>
+            <th class="text-left pl-2">GC</th>
+            <th class="text-left pl-2">DG</th>
+            <th class="text-left pl-2">Puntos</th>
+         </tr>
+      </thead>
+      <tbody >
+         <tr *ngFor = "let team of teams$ | async" class="text-left">
+            <td>{{team.position}}</td>
+            <td class="fixed"><img class = 'w-80 mb-2' src = "..\assets\img\{{team.logo}}"/></td>
+            <td>{{team.name}}</td>
+            <td>{{team.games_played}}</td>
+            <td>{{team.games_won}}</td>
+            <td>{{team.games_tied}}</td>
+            <td>{{team.games_lost}}</td>
+            <td class="fixed">{{team.goals_in_favor}}</td>
+            <td class="fixed">{{team.goals_against}}</td>
+            <td class="fixed">{{team.goal_difference}}</td>
+            <td class="text-left">{{team.points}}</td>
+         </tr>
+      </tbody>
+   </table>
 </div>
           
 
