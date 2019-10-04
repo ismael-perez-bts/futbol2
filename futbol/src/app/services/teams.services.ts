@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Observable, of } from 'rxjs';
-import { map, catchError, tap, filter } from 'rxjs/operators';
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { map, catchError } from 'rxjs/operators';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Team } from '../model/Team';
 
@@ -13,11 +13,9 @@ import { Team } from '../model/Team';
 
 export class TeamsService {
     // private teamsUrl = 'api/table';  // URL to web api   
-     httpOptions = {
-     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
+     
 
-public showTitle: boolean = true;
+
 
     constructor (private http: HttpClient, private router: Router, private route: ActivatedRoute) {
 
@@ -57,7 +55,7 @@ public showTitle: boolean = true;
   return 0;
 }
 
-public searchTeam (id: string): Observable<Team> {
+public searchTeamId (id: string): Observable<Team> {
       return this.http.get<Team>(`${environment.apiUrl}/teams/${id}`)
   //     return this.http.get<Team>(`${this.teamsUrl}/${id}`)
        .pipe(
@@ -71,7 +69,6 @@ public searchTeam (id: string): Observable<Team> {
 
 
 public updateTeams (team: Team): Observable<Team> {
-  console.log(team)
     return this.http.put<Team>(`${environment.apiUrl}/teams/${team.id}`, team)
  //   return this.http.put<Team>(`${this.teamsUrl}/${team.id}`, team)
   .pipe(
@@ -81,8 +78,6 @@ public updateTeams (team: Team): Observable<Team> {
             })
       );
 }
-
-
 
 }
 

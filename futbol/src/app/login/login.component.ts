@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginService } from '../services/login.service';
+
+
 
 @Component({
   selector: 'app-login',
@@ -14,17 +17,31 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', Validators.required)
   });
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private loginService: LoginService) { }
 
   ngOnInit() {
   } 
 
+  onLogin () {
+    this.loginService.login({email: 'edgar@pere.com', password: 'davicho1214'})
+    /*.subscribe((token: string) => {
+      localStorage.setItem('auth', token);
+      this.router.navigate(['/Welcome']);
+    });*/
+    if(this.loginForm.valid){
+      this.router.navigate(['Welcome']);
+    } else {
+      alert('Wrong credentials!');
+    }
 
-  onLogin() {
+  }
+
+
+  /*onLogin() {
     if(this.loginForm.valid){
       this.router.navigate(['/Welcome']);
     } else {
       alert('Wrong credentials!');
     }
-  }
+  }*/
 }

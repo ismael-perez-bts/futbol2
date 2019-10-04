@@ -18,6 +18,7 @@ import { TeamsComponentComponent } from './teams-component/teams-component.compo
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { UpdateTeamComponent } from './update-team/update-team.component';
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { UpdateTeamComponent } from './update-team/update-team.component';
   InMemoryDataService, { dataEncapsulation: false }   //import simulate data service  
   ) //import simulate data service  */
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
