@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  position: absolute;
+  overflow-y: auto;
+  left: 8%;
+}
+
+.container > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container > div > div {
+  align-self: center;
+}
+
+
+.transparent, input{
+  background: black;
+  opacity: 0.6;
+  border: 1px solid white;
+  color: white;
+}
