@@ -2,6 +2,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Team } from '../model/Team';
 import { Router } from '@angular/router';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { TeamsService } from '../services/teams.services';
+
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-teams-component',

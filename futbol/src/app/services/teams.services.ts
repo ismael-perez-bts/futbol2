@@ -55,7 +55,7 @@ export class TeamsService {
   return 0;
 }
 
-public searchTeamId (id: string): Observable<Team> {
+public searchTeamId (id): Observable<Team> {
       return this.http.get<Team>(`${environment.apiUrl}/teams/${id}`)
   //     return this.http.get<Team>(`${this.teamsUrl}/${id}`)
        .pipe(
