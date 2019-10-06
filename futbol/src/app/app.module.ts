@@ -18,6 +18,7 @@ import { TeamsComponentComponent } from './teams-component/teams-component.compo
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { UpdateTeamComponent } from './update-team/update-team.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { UpdateTeamComponent } from './update-team/update-team.component';
     TeamsComponentComponent,
     LoginComponent,
     WelcomeComponent,
-    UpdateTeamComponent
+    UpdateTeamComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

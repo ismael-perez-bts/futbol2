@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Team } from '../model/Team';
 import { Router } from '@angular/router';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-teams-component',
@@ -9,7 +10,9 @@ import { Router } from '@angular/router';
 })
 export class TeamsComponentComponent implements OnInit {
 
-   @Input () team: Team;
+  faEye = faEye;
+
+  @Input () team: Team;
 
   constructor(private router: Router) { }
 

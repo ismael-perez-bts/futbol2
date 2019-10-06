@@ -6,6 +6,7 @@ import { GeneralTableComponent } from './general-table/general-table.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { UpdateTeamComponent } from './update-team/update-team.component';
+import { signUpComponent, SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: '',
@@ -25,8 +26,10 @@ const routes: Routes = [
       { path: ':id',
          component: UpdateTeamComponent }
     ]
-   }  
-  
+  },
+  {
+    path: 'SignUp',
+    component: SignUpComponent }
 ];
 
 @NgModule({

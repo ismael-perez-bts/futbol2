@@ -4,10 +4,13 @@
       <div class="transparent card">
         <div class="card-body">
           <h2 class="mb-3"><img src="../../assets/img/logo_futbol.png" width="50px" class="mr-2">Login</h2>
-          <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+          <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="d-flex flex-column">
             <input type="text" placeholder="email" formControlName="email" class="w-100 mb-2 px-1 transparent">
             <input type="password" placeholder="password" formControlName="password" class="w-100 mb-2 px-1 transparent">
-            <button class="btn btn-dark">Login</button>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-dark"><fa-icon [icon]="faKey"></fa-icon> Login</button> 
+              <a class="text-light align-self-center" routerLink="/SignUp"><fa-icon [icon]="faBan"></fa-icon> No account? Sign Up</a>
+            </div>
           </form>
         </div>
       </div>

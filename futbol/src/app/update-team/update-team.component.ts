@@ -3,6 +3,7 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Team } from '../model/Team';
 import { TeamsService } from '../services/teams.services';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { faSave } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-update-team',
@@ -10,6 +11,8 @@ import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
   styleUrls: ['./update-team.component.scss']
 })
 export class UpdateTeamComponent implements OnInit {
+    faSave = faSave;
+    
     team: Team;
     id: string;
     formTeam: FormGroup;
@@ -58,7 +61,7 @@ export class UpdateTeamComponent implements OnInit {
 
    
 
-  public update (): void{
+  public update (): void {
     let form = this.formTeam;
 
     if (!form.valid) {
