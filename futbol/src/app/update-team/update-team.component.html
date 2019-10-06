@@ -4,14 +4,14 @@
       <div class = 'transparent card px-0'>
         <div class = 'card-body' *ngIf = 'team'>
           <form [formGroup] = 'formTeam' (ngSubmit) = 'update()' class="scrollbar scrollbar-primary">
-            <h3>Actualizar Estadisticas del Equipo</h3> 
+               <img class = 'w-80 mb-2' src = "..\assets\img\{{team.logo}}"/>
+                <h3 class = 'd-inline-block align-self-center'>Actualizar Estadisticas del Equipo</h3>
             <div class = 'row force-overflow'>
               <div class = 'col-md-6 p-1'>
                 <div class = 'form-group'>
                   <input type="hidden" formControlName="id">       
                   <input type="hidden" formControlName="location">
                   <input type="hidden" formControlName="stadium">
-                  <input type="hidden" formControlName="logo">
                   <label>Equipo</label>
                   <input type = 'text' formControlName = 'name'  class = 'form-control' #name/>
                 </div>
@@ -36,7 +36,7 @@
                   <input type = 'number' formControlName = 'games_lost'  class = 'form-control' />
                 </div>                            
               </div>              
-              <div class = 'col-md-6 p-1'>             
+              <div class = 'col-md-6 p-1'>  
                 <div class = 'form-group'>
                   <label for>Goles A Favor</label>
                   <input type = 'number' formControlName = 'goals_in_favor'  class = 'form-control' />

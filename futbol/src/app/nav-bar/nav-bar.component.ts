@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faTable, faUsers, faFutbol } from '@fortawesome/free-solid-svg-icons';
+import { faTable, faUsers, faFutbol, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav-bar',
@@ -11,6 +11,7 @@ export class NavBarComponent implements OnInit {
   faTable = faTable;
   faUsers = faUsers;
   faFutbol = faFutbol;
+  faSignOut = faSignOutAlt;
 
   constructor() { }
 

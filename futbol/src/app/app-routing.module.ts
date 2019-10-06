@@ -7,24 +7,32 @@ import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { UpdateTeamComponent } from './update-team/update-team.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   { path: '',
     component: LoginComponent },
   { path: 'Table', 
-    component: GeneralTableComponent
+    component: GeneralTableComponent,
+   // canActivate: [AuthGuard]
   },
   { path: 'Teams',
-    component: TeamComponent },
+    component: TeamComponent,
+  //  canActivate: [AuthGuard]
+ },
   { path: 'Login',
-    component: LoginComponent },
+    component: LoginComponent,
+   // canActivate: [AuthGuard] 
+  },
   { path: 'Welcome',
     component: WelcomeComponent },
   { path: 'Update-Teams',
     component: UpdateTeamComponent,
+    //canActivate: [AuthGuard],
     children: [
       { path: ':id',
          component: UpdateTeamComponent }
+         
     ]
   },
   {

@@ -5,6 +5,7 @@ import { TeamsService } from '../services/teams.services';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { faSave } from '@fortawesome/free-solid-svg-icons';
 
+
 @Component({
   selector: 'app-update-team',
   templateUrl: './update-team.component.html',
@@ -38,7 +39,8 @@ export class UpdateTeamComponent implements OnInit {
 
   constructor(private teamservice: TeamsService, private router: Router, private route: ActivatedRoute) {
 
-    this.searchTeam();
+     this.searchTeam(); 
+    
 
    }
 
@@ -46,11 +48,11 @@ export class UpdateTeamComponent implements OnInit {
   ngOnInit() {
   }
 
-  searchTeam (): void {
+   public searchTeam (): void {
    this.router.events.subscribe((data)=> {
       if (data instanceof NavigationEnd) {
           this.id = data.url.split('/')[2];
-          this.teamservice.searchTeam(this.id).subscribe((teams) => {
+          this.teamservice.searchTeamId(this.id).subscribe((teams) => {
       
       this.team = teams;
       this.infoTeam ();
@@ -73,9 +75,9 @@ export class UpdateTeamComponent implements OnInit {
 
   public submitData (form: Team): void {
     this.teamservice.updateTeams(form).subscribe((data) => {
-      console.log(data)
-        this.team = data;
-    })
-  }
+    this.team = data;
+    });
+    this.router.navigate(['Teams']);
+  } 
 
 }
