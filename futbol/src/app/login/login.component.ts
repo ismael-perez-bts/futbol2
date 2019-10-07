@@ -37,8 +37,8 @@ export class LoginComponent implements OnInit {
           return item;
       }).join('');
       this.loginService.login({email: email, password: password})
-      .subscribe((token: string) => {
-        localStorage.setItem('auth', token);
+      .subscribe((data: object) => {
+        localStorage.setItem('auth', data.data.token); 
         this.router.navigate(['Welcome']);
       });
     } else {

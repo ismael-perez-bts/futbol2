@@ -8,6 +8,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { UpdateTeamComponent } from './update-team/update-team.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AuthGuard } from './auth/auth.guard';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   { path: '',
@@ -22,10 +23,11 @@ const routes: Routes = [
  },
   { path: 'Login',
     component: LoginComponent,
-    canActivate: [AuthGuard] 
   },
   { path: 'Welcome',
-    component: WelcomeComponent },
+    component: WelcomeComponent,
+    canActivate: [AuthGuard], 
+  },
   { path: 'Update-Teams',
     component: UpdateTeamComponent,
     canActivate: [AuthGuard],
