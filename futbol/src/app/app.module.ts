@@ -22,6 +22,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { UpdateTeamComponent } from './update-team/update-team.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LoginService } from './services/login.service';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LoginService } from './services/login.service';
     LoginComponent,
     WelcomeComponent,
     UpdateTeamComponent,
-    SignUpComponent
+    SignUpComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
