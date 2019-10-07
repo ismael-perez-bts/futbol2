@@ -11,17 +11,19 @@ import { ActivatedRoute, Router } from '@angular/router';
   providers: [TeamsService]
 })
 export class TeamComponent implements OnInit {
-  public teams$: Observable<Team []>;
-
+  public teams;
   
-
   constructor(private teamsService: TeamsService, private Route: ActivatedRoute) {
 
-     this.teams$ = this.teamsService.getTeamsCards();
+    this.teamsService.getConsult().subscribe((data) => {
+      this.teams = Object.values(data)[2];
+    });
+     
      
    }
 
   ngOnInit() {
+
   }
 
 }
