@@ -73,7 +73,7 @@ public searchTeamId (id): Observable<Team> {
 
 
 public updateTeams (team: Team): Observable<Team> {
-    return this.http.put<Team>(`${environment.apiUrl}/teams/${team.id}`, team)
+    return this.http.put<Team>(`${environment.apiUrl}/teams/`, team)
  //   return this.http.put<Team>(`${this.teamsUrl}/${team.id}`, team)
   .pipe(
            catchError((err) => {
