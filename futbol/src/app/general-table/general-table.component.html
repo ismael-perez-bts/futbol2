@@ -17,7 +17,7 @@
          </tr>
       </thead>
       <tbody >
-         <tr *ngFor = "let team of teams$ | async" class="text-left">
+         <tr *ngFor = "let team of teams" class="text-left">
             <td>{{team.position}}</td>
             <td class="fixed"><img class = 'w-80 mb-2' src = "..\assets\img\{{team.logo}}"/></td>
             <td>{{team.name}}</td>

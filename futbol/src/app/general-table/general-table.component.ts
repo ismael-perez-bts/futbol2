@@ -12,12 +12,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class GeneralTableComponent implements OnInit {
 
-  public teams$: Observable<Team []>;
+  public teams;
 
   constructor(private teamsService: TeamsService, private router: ActivatedRoute) {
   
-
-   this.teams$ = this.teamsService.getTeams();
+    this.teamsService.getConsult().subscribe((data) => {
+      this.teams = Object.values(data)[2].sort(this.teamsService.sortByName)
+    });
   
     
    }

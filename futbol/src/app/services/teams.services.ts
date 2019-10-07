@@ -36,7 +36,7 @@ export class TeamsService {
        );
     }
 
-    public getTeamsCards (): Observable<Team []> {
+    public getTeamsCards (array): Observable<Team []> {
        return this.http.get<Team []>(`${environment.apiUrl}/teams`)
        //return this.http.get<Team []>(this.teamsUrl)  //conection to the url simulated API
        .pipe(
@@ -45,6 +45,10 @@ export class TeamsService {
                return of(err);
             })
        );
+    }
+
+    public getConsult() {
+      return this.http.get(`${environment.apiUrl}/teams`);
     }
   
   sortByName(a,b) {
