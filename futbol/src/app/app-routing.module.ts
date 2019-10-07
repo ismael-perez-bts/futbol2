@@ -14,21 +14,21 @@ const routes: Routes = [
     component: LoginComponent },
   { path: 'Table', 
     component: GeneralTableComponent,
-   // canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   },
   { path: 'Teams',
     component: TeamComponent,
-  //  canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
  },
   { path: 'Login',
     component: LoginComponent,
-   // canActivate: [AuthGuard] 
+    canActivate: [AuthGuard] 
   },
   { path: 'Welcome',
     component: WelcomeComponent },
   { path: 'Update-Teams',
     component: UpdateTeamComponent,
-    //canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     children: [
       { path: ':id',
          component: UpdateTeamComponent }

@@ -27,13 +27,22 @@ export class LoginComponent implements OnInit {
   } 
 
   onLogin () {
-    this.loginService.login({email: 'edgar@pere.com', password: 'davicho1214'})
-    /*.subscribe((token: string) => {
-      localStorage.setItem('auth', token);
-      this.router.navigate(['/Welcome']);
-    });*/
     if(this.loginForm.valid){
-      this.router.navigate(['Welcome']);
+      let email = JSON.stringify(this.loginForm.value.email).split('"').filter((item) => {
+        if(item !== '"')
+          return item;
+      }).join('');
+      let password = JSON.stringify(this.loginForm.value.password).split('"').filter((item) => {
+        if(item !== '"')
+          return item;
+      }).join('');
+      alert(email + password);
+      this.loginService.login({email: email, password: password})
+      .subscribe((token: string) => {
+        localStorage.setItem('auth', token);
+        this.router.navigate(['Welcome']);
+      });
+      // this.router.navigate(['Welcome']);
     } else {
       alert('Wrong credentials!');
     }

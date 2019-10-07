@@ -11,7 +11,7 @@ export class NavBarComponent implements OnInit {
   faTable = faTable;
   faUsers = faUsers;
   faFutbol = faFutbol;
-  faSignOut = faSignOutAlt;
+  faSignOutAlt = faSignOutAlt;
   faDoorOpen = faDoorOpen;
 
   constructor() { }

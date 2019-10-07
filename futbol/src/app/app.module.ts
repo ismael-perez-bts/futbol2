@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// used to create fake backend
+import { fakeBackendProvider } from './_helpers';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -44,7 +46,11 @@ import { LoginService } from './services/login.service';
   InMemoryDataService, { dataEncapsulation: false }   //import simulate data service  
   ) //import simulate data service  */
   ],
-  providers: [LoginService],
+  providers: [
+    LoginService,
+    // provider used to create fake backend
+    fakeBackendProvider
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
