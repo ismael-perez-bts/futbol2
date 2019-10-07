@@ -16,7 +16,6 @@ export class LoginService {
 
   isLoggedIn () {
     const token = localStorage.getItem('auth')
-    console.log(token)
     return token;
     }
  
