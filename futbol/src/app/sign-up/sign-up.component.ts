@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { faUserPlus, faCheck} from '@fortawesome/free-solid-svg-icons';
+import { SignupService } from '../services/signup.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -9,7 +10,6 @@ import { faUserPlus, faCheck} from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
-
   faUserPlus = faUserPlus;
   faCheck = faCheck;
 
@@ -21,7 +21,7 @@ export class SignUpComponent implements OnInit {
     confirmPw: new FormControl('', Validators.required)
   });
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private SignupService: SignupService) { }
 
   ngOnInit() {
   }
@@ -29,7 +29,32 @@ export class SignUpComponent implements OnInit {
   onSignUp() {
     if(this.formSignUp.valid){
       if(JSON.stringify(this.formSignUp.value.password) === JSON.stringify(this.formSignUp.value.confirmPw)){
-        this.router.navigate(['/Welcome']);
+        
+        let first_name = JSON.stringify(this.formSignUp.value.firstName).split('"').filter((item) => {
+          if(item !== '"')
+            return item;
+        }).join('');
+
+        let last_name = JSON.stringify(this.formSignUp.value.lastName).split('"').filter((item) => {
+          if(item !== '"')
+            return item;
+        }).join('');
+
+        let email = JSON.stringify(this.formSignUp.value.email).split('"').filter((item) => {
+          if(item !== '"')
+            return item;
+        }).join('');
+
+        let password = JSON.stringify(this.formSignUp.value.password).split('"').filter((item) => {
+          if(item !== '"')
+            return item;
+        }).join('');
+
+        this.SignupService.signup({ first_name: first_name, last_name: last_name, email: email, password: password})
+        .subscribe(() => {
+          alert('User Created Successfully.');
+          this.router.navigate(['']);
+        });
       } else {
         alert('Error: password and confirm password must be equals');
       }

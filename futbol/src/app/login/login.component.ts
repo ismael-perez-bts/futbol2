@@ -36,13 +36,11 @@ export class LoginComponent implements OnInit {
         if(item !== '"')
           return item;
       }).join('');
-      alert(email + password);
       this.loginService.login({email: email, password: password})
       .subscribe((token: string) => {
         localStorage.setItem('auth', token);
         this.router.navigate(['Welcome']);
       });
-      // this.router.navigate(['Welcome']);
     } else {
       alert('Wrong credentials!');
     }

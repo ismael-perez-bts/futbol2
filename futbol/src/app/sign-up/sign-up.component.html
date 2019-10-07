@@ -3,7 +3,7 @@
     <div class = 'col-4 h-100'>
       <div class = 'transparent card'>
         <div class = 'card-body'>
-          <form [formGroup] = 'formSignUp' (ngSubmit) = 'onSignUp()' class="">
+          <form [formGroup] = 'formSignUp' (ngSubmit) = 'onSignUp()'>
             <h3><fa-icon [icon]="faUserPlus"></fa-icon> Crea tu Cuenta</h3> 
             <input type="text" placeholder="first name" formControlName="firstName" class="w-100 mb-2 px-1 transparent">
             <input type="text" placeholder="last name" formControlName="lastName" class="w-100 mb-2 px-1 transparent">
