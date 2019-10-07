@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { faKey, faBan } from '@fortawesome/free-solid-svg-icons';
 import { LoginService } from '../services/login.service';
-
+import { Data } from '../model/Data';
 
 
 @Component({
@@ -11,7 +11,10 @@ import { LoginService } from '../services/login.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
+
 export class LoginComponent implements OnInit {
+
+  data: Data;  
 
   faKey = faKey;
   faBan = faBan;
@@ -37,7 +40,7 @@ export class LoginComponent implements OnInit {
           return item;
       }).join('');
       this.loginService.login({email: email, password: password})
-      .subscribe((data: object) => {
+      .subscribe((data: Data) => {
         localStorage.setItem('auth', data.data.token); 
         this.router.navigate(['Welcome']);
       });

@@ -5,8 +5,11 @@ import { LogoutComponent } from '../logout/logout.component';
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.scss']
+  styleUrls: ['./nav-bar.component.scss'],
+  providers: [LogoutComponent]
 })
+
+
 export class NavBarComponent implements OnInit {
 
   faTable = faTable;
