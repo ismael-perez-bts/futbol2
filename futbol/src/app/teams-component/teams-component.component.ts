@@ -19,8 +19,8 @@ export class TeamsComponentComponent implements OnInit {
 
   constructor(private router: Router, private teamService: TeamsService) { }
 
-  onRedirect (id: string) {
-    this.router.navigate(['/Update-Teams', id]);    
+  onRedirect (id: number) {
+    this.router.navigate(['/Update-Teams', id.toString()]);    
   }
 
   ngOnInit() {
