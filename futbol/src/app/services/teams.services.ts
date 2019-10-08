@@ -74,10 +74,6 @@ export class TeamsService {
   return 0;
 }
 
-<<<<<<< HEAD
-public searchTeamId (id) {
-      return this.http.get(`${environment.apiUrl}/teams/${id}`);
-=======
 public searchTeamId (id): Observable<Team> { 
   const httpOptions = {
         headers: new HttpHeaders ({
@@ -86,7 +82,6 @@ public searchTeamId (id): Observable<Team> {
       }
 
       return this.http.get<Team>(`${environment.apiUrl}/teams/${id}`, httpOptions)
->>>>>>> edgarp
   //     return this.http.get<Team>(`${this.teamsUrl}/${id}`)
       //  .pipe(
       //      catchError((err) => {
