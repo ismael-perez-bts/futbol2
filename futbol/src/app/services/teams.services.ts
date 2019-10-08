@@ -26,7 +26,12 @@ export class TeamsService {
     
 
     public getTeams (): Observable<Team []> {
-       return this.http.get<Team []>(`${environment.apiUrl}/teams`).pipe(map(items => items.sort(this.sortByName)))
+      const httpOptions = {
+        headers: new HttpHeaders ({
+          'Authorization': `Bearer ${localStorage.getItem('auth')}`
+        })
+      }
+       return this.http.get<Team []>(`${environment.apiUrl}/teams`,httpOptions).pipe(map(items => items.sort(this.sortByName)))
         //return this.http.get<Team []>(this.teamsUrl).pipe(map(items => items.sort(this.sortByName)))  //conection to the url simulated API
        .pipe(
            catchError((err) => {
@@ -37,7 +42,12 @@ export class TeamsService {
     }
 
     public getTeamsCards (array): Observable<Team []> {
-       return this.http.get<Team []>(`${environment.apiUrl}/teams`)
+      const httpOptions = {
+        headers: new HttpHeaders ({
+          'Authorization': `Bearer ${localStorage.getItem('auth')}`
+        })
+      }
+       return this.http.get<Team []>(`${environment.apiUrl}/teams`, httpOptions)
        //return this.http.get<Team []>(this.teamsUrl)  //conection to the url simulated API
        .pipe(
            catchError((err) => {
@@ -48,7 +58,12 @@ export class TeamsService {
     }
 
     public getConsult() {
-      return this.http.get(`${environment.apiUrl}/teams`);
+      const httpOptions = {
+        headers: new HttpHeaders ({
+          'Authorization': `Bearer ${localStorage.getItem('auth')}`
+        })
+      }
+      return this.http.get(`${environment.apiUrl}/teams`, httpOptions);
     }
   
   sortByName(a,b) {
@@ -59,8 +74,14 @@ export class TeamsService {
   return 0;
 }
 
-public searchTeamId (id): Observable<Team> {
-      return this.http.get<Team>(`${environment.apiUrl}/teams/${id}`)
+public searchTeamId (id): Observable<Team> { 
+  const httpOptions = {
+        headers: new HttpHeaders ({
+          'Authorization': `Bearer ${localStorage.getItem('auth')}`
+        })
+      }
+
+      return this.http.get<Team>(`${environment.apiUrl}/teams/${id}`, httpOptions)
   //     return this.http.get<Team>(`${this.teamsUrl}/${id}`)
        .pipe(
            catchError((err) => {
@@ -73,7 +94,12 @@ public searchTeamId (id): Observable<Team> {
 
 
 public updateTeams (team: Team): Observable<Team> {
-    return this.http.put<Team>(`${environment.apiUrl}/teams/`, team)
+  const httpOptions = {
+        headers: new HttpHeaders ({
+          'Authorization': `Bearer ${localStorage.getItem('auth')}`
+        })
+      }
+    return this.http.put<Team>(`${environment.apiUrl}/teams/`, team, httpOptions)
  //   return this.http.put<Team>(`${this.teamsUrl}/${team.id}`, team)
   .pipe(
            catchError((err) => {
