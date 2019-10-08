@@ -59,15 +59,15 @@ export class TeamsService {
   return 0;
 }
 
-public searchTeamId (id): Observable<Team> {
-      return this.http.get<Team>(`${environment.apiUrl}/teams/${id}`)
+public searchTeamId (id) {
+      return this.http.get(`${environment.apiUrl}/teams/${id}`);
   //     return this.http.get<Team>(`${this.teamsUrl}/${id}`)
-       .pipe(
-           catchError((err) => {
-               alert('There was an error. ');
-               return of(err);
-            })
-       );
+      //  .pipe(
+      //      catchError((err) => {
+      //          alert('There was an error.');
+      //          return of(err);
+      //       })
+      //  );
 }
 
 

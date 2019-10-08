@@ -19,6 +19,7 @@ export class UpdateTeamComponent implements OnInit {
     formTeam: FormGroup;
 
     infoTeam () {
+      alert(this.team);
     this.formTeam = new FormGroup ({ 
       id: new FormControl(this.team.id, Validators.required),
       location: new FormControl(this.team.location, Validators.required),
@@ -55,7 +56,9 @@ export class UpdateTeamComponent implements OnInit {
           this.teamservice.searchTeamId(this.id).subscribe((teams) => {
           this.team = Object.values(teams)[2];
           this.team = Object.values(this.team)[0];
-      this.infoTeam ();
+          console.log(this.team);
+          this.infoTeam ();
+          
     })
       }
     })
