@@ -56,7 +56,9 @@ export class UpdateTeamComponent implements OnInit {
           this.teamservice.searchTeamId(this.id).subscribe((teams) => {
           this.team = Object.values(teams)[2];
           this.team = Object.values(this.team)[0];
+          console.log(this.team);
           this.infoTeam ();
+          
     })
       }
     })
