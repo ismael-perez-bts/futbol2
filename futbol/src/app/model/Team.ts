@@ -1,5 +1,5 @@
 export interface Team {
-    id: number;
+    idequipo: number;
     name: string;
     location: string;
     stadium: string;

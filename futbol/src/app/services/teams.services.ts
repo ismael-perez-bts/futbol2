@@ -94,6 +94,7 @@ public searchTeamId (id): Observable<Team> {
 
 
 public updateTeams (team: Team): Observable<Team> {
+  // console.log(team);
   const httpOptions = {
         headers: new HttpHeaders ({
           'Authorization': `Bearer ${localStorage.getItem('auth')}`
